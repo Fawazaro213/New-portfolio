@@ -50,14 +50,9 @@ function About({}: Props) {
             <span 
             className='underline decoration-[#F7AB0A]'>little</span>{" "} background</h4>
             <p className='text-base'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Esse explicabo ex porro optio. Blanditiis, 
-                 nobis exercitationem consequatur adipisci
-                  illum quia saepe maiores numquam quo necessitatibus 
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique labore, 
-                  et tempore ab ipsum recusandae accusamus? Eum quisquam esse tempore.
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                   Quia incidunt dolorum quos voluptatum eos, quisquam delectus aspernatur nisi omnis illum.
+                Hi! I'm Aro Fawaz.A computer science student. Self-taught programmer. I specialize in fullstack development. 
+                I love to build good products and sevice to help solve problems in the society.
+                I consider myself a responsible and orderly person. Ready to lead a team because i was born to lead.
             </p>
         </div>
     </motion.div>

@@ -20,18 +20,18 @@ function ContactMe({}: Props) {
 
   return (
     <div className='h-screen relative flex overflow-hidden  md:text-left
-    text-left md:flex-row max-w-7xl justify-evenly mx-auto items-center z-0'>
+    text-left md:flex-row max-w-3xl justify-evenly mx-auto items-center z-0'>
         <h4 className='absolute top-24
         uppercase tracking-[20px]
         text-gray-500 text-2xl'>Contact</h4>
 
-        <div className='flex flex-col space-y-10'>
+        <div className='flex flex-col space-y-5'>
             <h4 className='text-4xl font-semibold text-center'>
                 I have got what you need.{' '}
                 <span className='underline decoration-[#F7AB0A]/50'>Lets Talk.</span>
             </h4>
 
-            <div className='space-y-10'>
+            <div className='space-y-5'>
             <div className='flex items-center space-x-5 justify-center'>
                 <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
                 <p className="text-2xl">+2347082692458</p>

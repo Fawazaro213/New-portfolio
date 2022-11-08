@@ -8,7 +8,7 @@ type Props = {}
 
 function Hero({}: Props) {
     const [text, count] = useTypewriter({
-        words: ['Hi, My Name is Aro Fawaz', '<TheGuyWhoLovesCreating/>'],
+        words: [ `<TheGuyWhoLovesToCode/>`, '</>'],
         loop: true,
         delaySpeed: 2000
     })
@@ -25,22 +25,22 @@ function Hero({}: Props) {
         <div className='z-20'>
             <h2 className='
             text-sm uppercase text-gray-500
-            pb-2 tracking-[15px]
+            pb-2 tracking-[12px]
             '>Software Developer</h2>
-            <h1 className='text-5xl lg:text-6xl font-semibold px-10'>
-                <span className='mr-3'>{text}</span>
+            <h1 className='text-2xl lg:text-6xl font-semibold px-10'>
+                <span className='mr-3'>Hi, My Name is Aro Fawaz. <br /> {text}</span>
                 <Cursor cursorColor='#F7AB0A'/>
             </h1>
 
-            <div className='pt-5'>
+            <div className='pt-5 max-w-7xl'>
                 <Link href="#about">
                 <button className='heroButton'>About</button>
                 </Link>
-                <Link href="#experiance">
-                <button className='heroButton'>Expirience</button>
-                </Link>
                 <Link href="#skills">
                 <button className='heroButton'>Skills</button>
+                </Link>
+                <Link href="#experince">
+                <button className='heroButton'>Experince</button>
                 </Link>
                 <Link href="#projects">
                 <button className='heroButton'>Projects</button>
