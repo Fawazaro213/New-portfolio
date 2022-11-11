@@ -4,34 +4,34 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      description: 'Title of the project',
-      type: "string"
+      name:"title",
+      title: "Title",
+      description: "Title of the project",
+      type:"string"
     },
     {
-      name: 'summary',
-      title: 'Summary',
-      type: "text"
-    },
-    {
-      name: 'image',
-      title: 'Image',
+      name: "image",
+      title: "Image",
       type: "image",
       option: {
-        hotspot: true
-      },
-    },
-   {
-      name: 'technologies',
-      title: 'Technologies',
-      type: "array",
-      of: [{type: 'reference', to: { type: 'skill' }}]
+        hotspot: true,
+      }
     },
     {
-      name: 'linkToBuild',
-      title: 'LinkToBuild',
-      type: "url"
+      name: "summary",
+      title: "Summary",
+      type: "text",
+    },
+    {
+      name: "technologies",
+      title: "Technologies",
+      type: "array",
+      of: [{ type: "reference", to: {type: "skill"} } ],
+    },
+    {
+      name: "linkToBuild",
+      title: "LinkToBuild",
+      type: "url",
     },
   ],
 }

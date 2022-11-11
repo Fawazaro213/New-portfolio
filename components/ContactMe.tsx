@@ -1,6 +1,7 @@
 import React from 'react';
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from '../typings';
 
 type Inputs = {
     name: string,
@@ -9,9 +10,11 @@ type Inputs = {
     message: string,
   };
 
-type Props = {};
+type Props = {
+    pageInfo: PageInfo
+};
 
-function ContactMe({}: Props) {
+function ContactMe({pageInfo}: Props) {
     const { register, handleSubmit } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(
         window.location.href = `mailto:arofawaz123@gmail.com?subject=${formData.subject}&
@@ -28,23 +31,23 @@ function ContactMe({}: Props) {
         <div className='flex flex-col space-y-5'>
             <h4 className='text-4xl font-semibold text-center'>
                 I have got what you need.{' '}
-                <span className='underline decoration-[#F7AB0A]/50'>Lets Talk.</span>
+                <span className='underline decoration-[#2d858b]/50'>Lets Talk.</span>
             </h4>
 
             <div className='space-y-5'>
             <div className='flex items-center space-x-5 justify-center'>
-                <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                <p className="text-2xl">+2347082692458</p>
+                <PhoneIcon className='text-[#2d858b] h-7 w-7 animate-pulse'/>
+            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
             </div>
 
             <div className='flex items-center space-x-5 justify-center'>
-                <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                <p className="text-2xl">arofawaz123@gmail.com</p>
+                <EnvelopeIcon className='text-[#2d858b] h-7 w-7 animate-pulse'/>
+                <p className="text-2xl">{pageInfo?.email}</p>
             </div>
 
             <div className='flex items-center space-x-5 justify-center'>
-                <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-                <p className="text-2xl">Lawanson, Surulere, Lagos</p>
+                <MapPinIcon className='text-[#2d858b] h-7 w-7 animate-pulse'/>
+                <p className="text-2xl">{pageInfo?.address}</p>
             </div>
             </div>
 
@@ -55,7 +58,7 @@ function ContactMe({}: Props) {
                 </div>
                 <input {...register('subject')} placeholder='Subject' className='contactInput' type="text" />
                 <textarea {...register('message')} placeholder='Message' className='contactInput'/>
-                <button type='submit' className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>Submit</button>
+                <button type='submit' className='bg-[#2d858b] py-5 px-10 rounded-md text-black font-bold text-lg'>Submit</button>
             </form>
         </div>
     </div>

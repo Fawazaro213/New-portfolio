@@ -17,7 +17,7 @@ import { fetchSkills } from '../utils/fetchSkills';
 import { fetchSocials} from '../utils/fetchSocials';
 import { fetchProjects} from '../utils/fetchProjects';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
-// import { createClient } from "next-sanity";
+import { createClient } from "next-sanity";
 
 type Props = {
   pageInfo: PageInfo;
@@ -31,42 +31,42 @@ const Home = ({pageInfo, skills, socials, experiences, projects}: Props) => {
   return (
     <div className='bg-[rgb(36,36,36)] text-white 
     h-screen snap-y snap-mandatory
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#2d858b]/80'>
       <Head>
-        <title>Fawaz Portfolio</title>
+        <title>{pageInfo?.name} - Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Header */}
-      <Header socials={socials}/>
+      <Header socials={socials} />
 
       {/* Hero */}
       <section id='hero' className='snap-start'>
-        <Hero />
+        <Hero pageInfo={pageInfo}/>
       </section>
 
       {/* About */}
       <section id="about" className='snap-center'>
-        <About />
+        <About pageInfo={pageInfo}/>
       </section>
 
-      {/* Expirience */}
-      <section id='experiance' className='snap-center'>
-        <WorkExperience />
+      {/* Experience */}
+      <section id='experience' className='snap-center'>
+        <WorkExperience experiences={experiences}/>
       </section>
 
       {/* Skills */}
       <section id="skills" className='snap-start'>
-        <Skills />
+        <Skills skills={skills}/>
       </section>
 
       {/* Projects */}
       <section id="projects" className='snap-start'>
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       {/* Contact Me */}
       <section id="contact" className='snap-start'>
-          <ContactMe />
+          <ContactMe pageInfo={pageInfo}/>
       </section>
 
       {/* Footer */}

@@ -6,23 +6,23 @@ interface SanityBody {
 }
 
 interface Image {
-    _type: "image";
+    _type: "iamge";
     asset: {
         _ref: string;
         _type: "reference";
-    }
+    };
 }
 
-interface PageInfo extends SanityBody {
-    _type: "pageInfo";
+export interface PageInfo extends SanityBody {
+    backgroundInformation: ReactNode;
+    _type: "pageinfo";
     address: string;
-    backgroundInfomation: string;
     email: string;
     role: string;
-    heroImage: string;
+    heroImage: Image;
     name: string;
     phoneNumber: string;
-    profilePic: string;
+    profilePic: Image;
 }
 
 export interface Technology extends SanityBody {
@@ -40,23 +40,22 @@ export interface Skill extends SanityBody {
 }
 
 export interface Experience extends SanityBody {
-    _type: "experince";
+    dateEnded: ReactNode;
+    _type: "experience";
     company: string;
     companyImage: Image;
     dateStarted: date;
-    dateEnded: date;
     isCurrentlyWorkingHere: boolean;
     jobTitle: string;
     points: string[];
-    technologies: Technology[];
-}
-
+    technologies: Technology[];        
+    }
 export interface Project extends SanityBody {
     title: string;
     _type: "project";
     image: Image;
     linkToBuild: string;
-    summary: number;
+    summary: string;
     technologies: Technology[];
 }
 

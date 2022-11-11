@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { urlFor } from '../sanity'
+import { PageInfo } from '../typings'
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo,
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
     <motion.div
     initial ={{
@@ -43,17 +47,17 @@ function About({}: Props) {
         flex-shrink-0 w-56 h-56 object-cover
         md:rounded-lg md:w-64 md:h-64 lg:w-[400px] 
         lg:h-[400px]' 
-        src="/static/profile.jpg" alt="My profile" />
+        src={urlFor(pageInfo?.profilePic).url()} alt="My profile" />
 
         <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>Here is a{" "}
             <span 
-            className='underline decoration-[#F7AB0A]'>little</span>{" "} background</h4>
+            className='underline decoration-[#2d858b]'>little</span>{" "} background</h4>
             <p className='text-base'>
-                Hi! I'm Aro Fawaz.A computer science student. Self-taught programmer. I specialize in fullstack development. 
-                I love to build good products and sevice to help solve problems in the society.
-                I consider myself a responsible and orderly person. Ready to lead a team because i was born to lead.
+                {pageInfo?.backgroundInformation}
             </p>
+            <a href='\static\fawaz-resume.pdf' target='_blank' className='uppercase text-sm uppercase text-[#2d858b]
+            pb-2 tracking-[5px]'>View resume</a>
         </div>
     </motion.div>
   )

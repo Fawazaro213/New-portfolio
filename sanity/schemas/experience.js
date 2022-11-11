@@ -4,49 +4,50 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'jobTitle',
-      title: 'JobTitle',
+      name:"jobTitle",
+      title: "JobTitle",
       type: "string"
     },
     {
-      name: 'company',
-      title: 'Company',
-      type: "text"
-    },
-    {
-      name: 'companyImage',
-      title: 'CompanyImage',
+      name: "companyImage",
+      title: "CompanyImage",
       type: "image",
       option: {
-        hotspot: true
-      },
+        hotspot: true,
+      }
     },
     {
-      name: 'dateStarted',
-      title: 'DateStarted',
+      name: "company",
+      title: "Company",
+      type: "string"
+
+    },
+    {
+      name: "dateStarted",
+      title: "DateStarted",
       type: "date"
     },
     {
-      name: 'dataEnded',
-      title: 'DataEnded',
-      type: "date",
+      name: "dateEnded",
+      title: "DateEnded",
+      type: "date"
     },
     {
-      name: 'isCurrentlyWorkingHere',
-      title: 'IsCurrentlyWorkingHere',
+      name: "isCurrentlyWorking",
+      title: "IsCurrentlyWorking",
       type: "boolean"
     },
     {
-      name: 'technologies',
-      title: 'Technologies',
+      name: "technologies",
+      title: "Technologies",
       type: "array",
-      of: [{type: 'reference', to: { type: 'skill' }}]
+      of: [{ type: "reference", to: {type: "skill"} } ],
     },
     {
-      name: 'points',
-      title: 'Points',
+      name: "points",
+      title: "Points",
       type: "array",
-      of: [{type: 'string'}]
+      of:[{ type: "string" }]
     },
   ],
 }

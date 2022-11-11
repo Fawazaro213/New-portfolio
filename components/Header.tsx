@@ -43,9 +43,7 @@ function Header({ socials }: Props) {
               url={social.url}
                fgColor='gray' bgColor='
               transparent'/>
-
             ))}
-
         </motion.div>
 
         <Link href='#contact'> 
@@ -64,8 +62,6 @@ function Header({ socials }: Props) {
               duration: 1.5
             }}
             className='flex items-center text-gray-300 cursor-pointer'>
-              <SocialIcon url="https://facebook.com/jaketrent" fgColor='gray' bgColor='
-            transparent'/>
               <SocialIcon network='email' fgColor='gray' bgColor='transparent' />
                 <p className='hidden uppercase 
                 md:inline-flex text-sm text-gray-400'>

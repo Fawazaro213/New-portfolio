@@ -4,24 +4,24 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      description: 'Title of skill',
-      type: "string"
+      name:"title",
+      title: "Title",
+      description: "Title of skill",
+      type:"string"
     },
     {
-      name: 'progress',
-      title: 'Progress',
+      name: "progress",
+      title: "Progress",
       type: "number",
-      description: 'Progress of skill from 0-100',
+      description: "Progress of the skill from 0 to 100",
       validation: (Rule) => Rule.min(0).max(100),
     },
     {
-      name: 'image',
-      title: 'Image',
+      name:"image" ,
+      title: "Image",
       type: "image",
       option: {
-        hotspot: true
+        hotspot: true,
       },
     },
   ],

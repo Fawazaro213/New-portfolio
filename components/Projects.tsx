@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { urlFor } from '../sanity';
+import { Project } from '../typings';
 
-type Props = {};
+type Props = {
+  projects: Project[],
+};
 
-const Projects = (props: Props) => {
-    const projects = [1, 2, 3, 4, 5]
+const Projects = ({projects}: Props) => {
   return (
     <motion.div 
     initial ={{
@@ -22,12 +25,14 @@ const Projects = (props: Props) => {
         uppercase tracking-[20px]
         text-gray-500 text-2xl'>Projects</h3>
 
-        <div className='relative w-full flex overflow-x-scroll
+        <div
+        className='relative w-full flex overflow-x-scroll
         overflow-y-hidden snap-x snap-mandatory z-20 
-       scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-            {projects.map((project, i) => (    
+       scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#2d858b]/80'>
+            
+            {projects?.map((project, i) => (    
             <div
-            key={i}
+            key={project?._id}
             className="w-screen flex-shrink-0 snap-center
             flex flex-col space-y-5 items-center justify-center p-20
             md:p-44 h-screen"
@@ -40,23 +45,32 @@ const Projects = (props: Props) => {
                     transition ={{ duration: 1.2 }}
                     whileInView ={{ opacity: 1, y: 0, }}
                     viewport ={{ once: true }}
-                    className='w-24 h-24'
-                     src="/static/react.png" alt="" />
+                    className='w-65 h-60'
+                     src={urlFor(project?.image).url()} alt="" />
 
                     <div className='space-y-5 px-0 md:px-10 max-w-6xl'>
                         <h4 className='text-4xl font-semibold text-center'>
-                          <span className='underline decoration-[#F7AB0A]/50'>Case Study {i + 1} of {projects.length}:</span> 
-                          Ebay clone</h4>
+                          <span className='underline decoration-[#2d858b]/50'>Case Study {i + 1} of {projects.length}:</span> 
+                          {project?.title}</h4>
+
+                          <div className='flex items-center space-x-2 justify-center'>
+                          {project?.technologies.map(technology => (
+                            <img
+                            className='h-10 w-10'
+                            key = {technology._id} src={urlFor(technology.image).url()} alt="" />
+                          ))}
+
+        </div>
+
                           <p className='text-lg text-center md:text-left'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, ipsum. Aperiam suscipit velit corporis quae? Reprehenderit laboriosam incidunt a dolore.
-                             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            {project?.summary}</p>
                     </div>
             </div>
             ))}
         </div>
 
         <div className='w-full absolute 
-        top-[30%] bg-[#F7AB0A]/10 left-0 h-[300px] -skew-y-12'>
+        top-[30%] bg-[#2d858b]/10 left-0 h-[300px] -skew-y-12'>
         </div>
     </motion.div>
   )

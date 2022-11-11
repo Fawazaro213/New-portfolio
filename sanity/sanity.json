@@ -1,11 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "portfolio-build"
+    "name": "portfolio-2.0"
   },
   "api": {
-    "baseurl": "http://localhost:3000/",
-    "projectId": "9di7rv72",
+    "projectId": "8zfb6dl9",
     "dataset": "production"
   },
   "plugins": [

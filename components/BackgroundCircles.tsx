@@ -18,18 +18,18 @@ function BackgroundCircles({}: Props) {
         duration: 2.5
     }}
      className='relative flex justify-center items-center'>
-        <div className='absolute border border-[#333333]
+        <div className='absolute border border-[#2d858b]
          rounded-full h-[200px] w-[200px]
          mt-52 animate-ping'/>
-        <div className='absolute border border-[#333333]
+        <div className='absolute border border-[#2d858b]
          rounded-full h-[300px] w-[300px] animate-ping
          mt-52'/>
-        <div className='absolute border border-[#333333]
+        <div className='absolute border border-[#242424]
          rounded-full h-[500px] w-[500px]
          mt-52'/>
-        <div className='rounded-full border border-[#F7AB0A] 
+        <div className='rounded-full border border-[#2d858b] 
         opacity-20 mt-52 absolute h-[650px] w-[650px] animate-ping'/>
-        <div className='absolute border border-[#333333]
+        <div className='absolute border border-[#2d858b]
          rounded-full h-[800px] w-[800px] animate-ping
          mt-52'/>
     </motion.div>
