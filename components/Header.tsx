@@ -61,7 +61,7 @@ function Header({ socials }: Props) {
               duration: 1.5
             }}
             className='flex items-center text-gray-300 cursor-pointer'>
-              <SocialIcon url='http://localhost:3000/#contact' network='email' fgColor='gray' bgColor='transparent' />
+              {/* <SocialIcon url='http://localhost:3000/#contact' network='email' fgColor='gray' bgColor='transparent' /> */}
               <Link href='#contact'> 
                 <p className='hidden uppercase 
                 md:inline-flex text-sm text-gray-400'>
