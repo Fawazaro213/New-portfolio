@@ -56,7 +56,7 @@ function About({pageInfo}: Props) {
             <p className='text-base'>
                 {pageInfo?.backgroundInformation}
             </p>
-            <a href='\static\fawaz-resume.pdf' target='_blank' className='uppercase text-sm uppercase text-[#2d858b]
+            <a href='\static\fawaz-resume.pdf' target='_blank' className='text-sm uppercase text-[#2d858b]
             pb-2 tracking-[5px]'>View resume</a>
         </div>
     </motion.div>
