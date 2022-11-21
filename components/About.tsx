@@ -47,7 +47,8 @@ function About({pageInfo}: Props) {
         flex-shrink-0 w-56 h-56 object-cover
         md:rounded-lg md:w-64 md:h-64 lg:w-[400px] 
         lg:h-[400px]' 
-        src={urlFor(pageInfo?.profilePic).url()} alt="My profile" />
+        src={urlFor(pageInfo?.profilePic).url()} 
+        alt="My profile" />
 
         <div className='space-y-10 px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>Here is a{" "}
